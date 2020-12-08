@@ -1,3 +1,10 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: white;
@@ -54,7 +61,7 @@ body {
 }
 
 .main__form {
-    max-width: 584px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
@@ -84,4 +91,58 @@ body {
 
 .form__input input:focus {
     outline: none;
+}
+
+.main__submit {
+    margin-top: 25px;
+}
+
+/* Footer */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-top: 1px solid grey;
+}
+
+.footer div ul {
+    list-style: none;
+    display: flex;
+}
+
+.footer div ul li {
+    padding-left: 27px;
+}
+
+/* Media Queries */
+@media (max-width: 638px) {
+    .footer {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .footer div:nth-child(2) ul {
+        margin-bottom: 15px;
+    }
+    .footer div:nth-child(1) ul li:last-child {
+        display: none;
+    }
+}
+
+@media (max-width: 584px) {
+    .main__form {
+        width: 100%;
+    }
+    .main__input {
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 425px) {
+    .main__input {
+        padding: 0 15px;
+    }
+    .main__hero img {
+        width: 220px;
+    }
 }
